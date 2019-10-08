@@ -39,7 +39,7 @@ class EventCell : UITableViewCell {
 
     let formatter = DateFormatter()
     formatter.dateStyle = .short
-    if let when = event.date {
+    if let when = event.closeDate {
       date.text = formatter.string(for: when)
     } else {
       date.text = ""

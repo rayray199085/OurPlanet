@@ -7,25 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0BE1AFBCCA96001F1DA0F276 /* Pods_OurPlanet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA79E2C4547A12F52AF22FC /* Pods_OurPlanet.framework */; };
-		0D8B0B39234AA78E00594301 /* EOEventCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B0B38234AA78E00594301 /* EOEventCategories.swift */; };
+		0D5A6905234C42A000AE6C86 /* EOEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5A68FF234C42A000AE6C86 /* EOEvent.swift */; };
+		0D5A6906234C42A000AE6C86 /* EOEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5A6900234C42A000AE6C86 /* EOEnvelope.swift */; };
+		0D5A6907234C42A000AE6C86 /* EOError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5A6901234C42A000AE6C86 /* EOError.swift */; };
+		0D5A6908234C42A000AE6C86 /* EOLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5A6902234C42A000AE6C86 /* EOLocation.swift */; };
+		0D5A6909234C42A000AE6C86 /* EOCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5A6903234C42A000AE6C86 /* EOCategory.swift */; };
+		0D5A690A234C42A000AE6C86 /* EONET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5A6904234C42A000AE6C86 /* EONET.swift */; };
 		3D46E6281E258DFC0090C97B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46E6271E258DFC0090C97B /* AppDelegate.swift */; };
 		3D46E62A1E258DFC0090C97B /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46E6291E258DFC0090C97B /* CategoriesViewController.swift */; };
 		3D46E62D1E258DFC0090C97B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D46E62B1E258DFC0090C97B /* Main.storyboard */; };
 		3D46E62F1E258DFC0090C97B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D46E62E1E258DFC0090C97B /* Assets.xcassets */; };
 		3D46E6321E258DFC0090C97B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D46E6301E258DFC0090C97B /* LaunchScreen.storyboard */; };
+		87633C068C30F6B484725A22 /* Pods_OurPlanet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56B521753811770E0A7AC94 /* Pods_OurPlanet.framework */; };
 		D8D4B3B53FB9DBEFD316986D /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B590E2532FBB4E15A320 /* EventCell.swift */; };
-		D8D4B48C386519868A7FCF37 /* EOLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B8B9345BB7B3111B3486 /* EOLocation.swift */; };
-		D8D4B551A4A3EC7D24280B22 /* EOEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B8EF2AD93009A46E705B /* EOEnvelope.swift */; };
-		D8D4B8E35C10E832C1CFE0B0 /* EOCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B16B4BA42E13E4F7DBB2 /* EOCategory.swift */; };
 		D8D4B93D3B0419880A462D8C /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B1AF36E540D16E9AC066 /* EventsViewController.swift */; };
-		D8D4B99E9352271FA7C4C3CA /* EONET.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4BAA4F4C10477E0535C81 /* EONET.swift */; };
-		D8D4BE89A62A1F0415C0DF42 /* EOEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B6D93EEB59915317AA1D /* EOEvent.swift */; };
-		D8D4BF1B403B74C10D576473 /* EOError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4BE9443CDA2DB4BF2835C /* EOError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D8B0B38234AA78E00594301 /* EOEventCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOEventCategories.swift; sourceTree = "<group>"; };
+		0D5A68FF234C42A000AE6C86 /* EOEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EOEvent.swift; sourceTree = "<group>"; };
+		0D5A6900234C42A000AE6C86 /* EOEnvelope.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EOEnvelope.swift; sourceTree = "<group>"; };
+		0D5A6901234C42A000AE6C86 /* EOError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EOError.swift; sourceTree = "<group>"; };
+		0D5A6902234C42A000AE6C86 /* EOLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EOLocation.swift; sourceTree = "<group>"; };
+		0D5A6903234C42A000AE6C86 /* EOCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EOCategory.swift; sourceTree = "<group>"; };
+		0D5A6904234C42A000AE6C86 /* EONET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EONET.swift; sourceTree = "<group>"; };
+		392B13F37817BA63AC11DA62 /* Pods-OurPlanet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OurPlanet.debug.xcconfig"; path = "Target Support Files/Pods-OurPlanet/Pods-OurPlanet.debug.xcconfig"; sourceTree = "<group>"; };
+		3B2A0AB3F466C77B35520F86 /* Pods-OurPlanet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OurPlanet.release.xcconfig"; path = "Target Support Files/Pods-OurPlanet/Pods-OurPlanet.release.xcconfig"; sourceTree = "<group>"; };
 		3D46E6241E258DFC0090C97B /* OurPlanet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OurPlanet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D46E6271E258DFC0090C97B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D46E6291E258DFC0090C97B /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
@@ -33,17 +39,9 @@
 		3D46E62E1E258DFC0090C97B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D46E6311E258DFC0090C97B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D46E6331E258DFC0090C97B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		890E98A7E71A63D2EDCDA4CF /* Pods-OurPlanet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OurPlanet.debug.xcconfig"; path = "Target Support Files/Pods-OurPlanet/Pods-OurPlanet.debug.xcconfig"; sourceTree = "<group>"; };
-		A5DEB339D4C5C0099D74FCFF /* Pods-OurPlanet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OurPlanet.release.xcconfig"; path = "Target Support Files/Pods-OurPlanet/Pods-OurPlanet.release.xcconfig"; sourceTree = "<group>"; };
-		BEA79E2C4547A12F52AF22FC /* Pods_OurPlanet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OurPlanet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8D4B16B4BA42E13E4F7DBB2 /* EOCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EOCategory.swift; sourceTree = "<group>"; };
+		A56B521753811770E0A7AC94 /* Pods_OurPlanet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OurPlanet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D4B1AF36E540D16E9AC066 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		D8D4B590E2532FBB4E15A320 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
-		D8D4B6D93EEB59915317AA1D /* EOEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EOEvent.swift; sourceTree = "<group>"; };
-		D8D4B8B9345BB7B3111B3486 /* EOLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EOLocation.swift; sourceTree = "<group>"; };
-		D8D4B8EF2AD93009A46E705B /* EOEnvelope.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EOEnvelope.swift; sourceTree = "<group>"; };
-		D8D4BAA4F4C10477E0535C81 /* EONET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EONET.swift; sourceTree = "<group>"; };
-		D8D4BE9443CDA2DB4BF2835C /* EOError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EOError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,37 +49,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BE1AFBCCA96001F1DA0F276 /* Pods_OurPlanet.framework in Frameworks */,
+				87633C068C30F6B484725A22 /* Pods_OurPlanet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		31AD1B71FCF68CF4AC0570D4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BEA79E2C4547A12F52AF22FC /* Pods_OurPlanet.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3A81391CF3C33E1DC33F8BF5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				890E98A7E71A63D2EDCDA4CF /* Pods-OurPlanet.debug.xcconfig */,
-				A5DEB339D4C5C0099D74FCFF /* Pods-OurPlanet.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		3D46E61B1E258DFC0090C97B = {
 			isa = PBXGroup;
 			children = (
 				3D46E6261E258DFC0090C97B /* OurPlanet */,
 				3D46E6251E258DFC0090C97B /* Products */,
-				3A81391CF3C33E1DC33F8BF5 /* Pods */,
-				31AD1B71FCF68CF4AC0570D4 /* Frameworks */,
+				70483E25F715B395AD138B85 /* Pods */,
+				B334B6B3C4B42FFFE3AEE40A /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -111,16 +92,32 @@
 			path = OurPlanet;
 			sourceTree = "<group>";
 		};
+		70483E25F715B395AD138B85 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				392B13F37817BA63AC11DA62 /* Pods-OurPlanet.debug.xcconfig */,
+				3B2A0AB3F466C77B35520F86 /* Pods-OurPlanet.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B334B6B3C4B42FFFE3AEE40A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A56B521753811770E0A7AC94 /* Pods_OurPlanet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D8D4B8DAB960CC6D73230C61 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D8D4B16B4BA42E13E4F7DBB2 /* EOCategory.swift */,
-				D8D4BE9443CDA2DB4BF2835C /* EOError.swift */,
-				D8D4B6D93EEB59915317AA1D /* EOEvent.swift */,
-				D8D4BAA4F4C10477E0535C81 /* EONET.swift */,
-				D8D4B8B9345BB7B3111B3486 /* EOLocation.swift */,
-				D8D4B8EF2AD93009A46E705B /* EOEnvelope.swift */,
-				0D8B0B38234AA78E00594301 /* EOEventCategories.swift */,
+				0D5A6903234C42A000AE6C86 /* EOCategory.swift */,
+				0D5A6900234C42A000AE6C86 /* EOEnvelope.swift */,
+				0D5A6901234C42A000AE6C86 /* EOError.swift */,
+				0D5A68FF234C42A000AE6C86 /* EOEvent.swift */,
+				0D5A6902234C42A000AE6C86 /* EOLocation.swift */,
+				0D5A6904234C42A000AE6C86 /* EONET.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,11 +129,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D46E6361E258DFC0090C97B /* Build configuration list for PBXNativeTarget "OurPlanet" */;
 			buildPhases = (
-				03F88C931EC7BEAE0CEEDD4F /* [CP] Check Pods Manifest.lock */,
+				998D179B0054B0B6D140DCA7 /* [CP] Check Pods Manifest.lock */,
 				3D46E6201E258DFC0090C97B /* Sources */,
 				3D46E6211E258DFC0090C97B /* Frameworks */,
 				3D46E6221E258DFC0090C97B /* Resources */,
-				57813397815F66771FD7D798 /* [CP] Embed Pods Frameworks */,
+				6B3EEF422431B9FE79B7A800 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,7 +193,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		03F88C931EC7BEAE0CEEDD4F /* [CP] Check Pods Manifest.lock */ = {
+		6B3EEF422431B9FE79B7A800 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OurPlanet/Pods-OurPlanet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OurPlanet/Pods-OurPlanet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		998D179B0054B0B6D140DCA7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -218,34 +239,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		57813397815F66771FD7D798 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OurPlanet/Pods-OurPlanet-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OurPlanet/Pods-OurPlanet-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -253,17 +246,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D5A6908234C42A000AE6C86 /* EOLocation.swift in Sources */,
 				3D46E62A1E258DFC0090C97B /* CategoriesViewController.swift in Sources */,
+				0D5A6909234C42A000AE6C86 /* EOCategory.swift in Sources */,
+				0D5A6907234C42A000AE6C86 /* EOError.swift in Sources */,
+				0D5A6905234C42A000AE6C86 /* EOEvent.swift in Sources */,
 				3D46E6281E258DFC0090C97B /* AppDelegate.swift in Sources */,
 				D8D4B93D3B0419880A462D8C /* EventsViewController.swift in Sources */,
-				0D8B0B39234AA78E00594301 /* EOEventCategories.swift in Sources */,
+				0D5A690A234C42A000AE6C86 /* EONET.swift in Sources */,
 				D8D4B3B53FB9DBEFD316986D /* EventCell.swift in Sources */,
-				D8D4B8E35C10E832C1CFE0B0 /* EOCategory.swift in Sources */,
-				D8D4BF1B403B74C10D576473 /* EOError.swift in Sources */,
-				D8D4BE89A62A1F0415C0DF42 /* EOEvent.swift in Sources */,
-				D8D4B99E9352271FA7C4C3CA /* EONET.swift in Sources */,
-				D8D4B48C386519868A7FCF37 /* EOLocation.swift in Sources */,
-				D8D4B551A4A3EC7D24280B22 /* EOEnvelope.swift in Sources */,
+				0D5A6906234C42A000AE6C86 /* EOEnvelope.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +394,7 @@
 		};
 		3D46E6371E258DFC0090C97B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 890E98A7E71A63D2EDCDA4CF /* Pods-OurPlanet.debug.xcconfig */;
+			baseConfigurationReference = 392B13F37817BA63AC11DA62 /* Pods-OurPlanet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -416,7 +408,7 @@
 		};
 		3D46E6381E258DFC0090C97B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5DEB339D4C5C0099D74FCFF /* Pods-OurPlanet.release.xcconfig */;
+			baseConfigurationReference = 3B2A0AB3F466C77B35520F86 /* Pods-OurPlanet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";

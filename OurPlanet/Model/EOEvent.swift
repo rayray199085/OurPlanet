@@ -28,45 +28,48 @@
 
 import Foundation
 
-struct EOEventCategory: Decodable {
-  let id: Int
-  let title: String
-}
-
-struct EOEvent: Decodable {
+struct EOEvent {
   let id: String
   let title: String
   let description: String
   let link: URL?
   let closeDate: Date?
-  let categories: [EOEventCategory]
-  let locations: [EOLocation]?
-  var date: Date? {
-    return closeDate ?? locations?.compactMap { $0.date }.first
-  }
+  let categories: [Int]
+  let locations: [EOLocation]
 
-  private enum CodingKeys: String, CodingKey {
-    case id, title, description, link, closeDate = "closed", categories, locations = "geometries"
-  }
-
-  init(from decoder: Decoder) throws {
-    let container = try decoder.container(keyedBy: CodingKeys.self)
-    id = try container.decode(String.self, forKey: .id)
-    title = try container.decode(String.self, forKey: .title)
-    description = try container.decode(String.self, forKey: .description)
-    link = try container.decode(URL?.self, forKey: .link)
-    closeDate = try container.decode(Date.self, forKey: .closeDate)
-    categories = try container.decode([EOEventCategory].self, forKey: .categories)
-    // This may throw because we don't fully implement the GeoJSON spec. Let's igore those errors for now.
-    locations = try? container.decode([EOLocation].self, forKey: .locations)
+  init?(json: [String: Any]) {
+    guard let id = json["id"] as? String,
+          let title = json["title"] as? String,
+          let description = json["description"] as? String,
+          let link = json["link"] as? String,
+          let closeDate = json["closed"] as? String,
+          let categories = json["categories"] as? [[String: Any]] else {
+      return nil
+    }
+    self.id = id
+    self.title = title
+    self.description = description
+    self.link = URL(string: link)
+    self.closeDate = EONET.ISODateReader.date(from: closeDate)
+    self.categories = categories.compactMap { categoryDesc in
+      guard let catID = categoryDesc["id"] as? Int else {
+        return nil
+      }
+      return catID
+    }
+    if let geometries = json["geometries"] as? [[String: Any]] {
+      locations = geometries.compactMap(EOLocation.init)
+    } else {
+      locations = []
+    }
   }
 
   static func compareDates(lhs: EOEvent, rhs: EOEvent) -> Bool {
-    switch (lhs.date, rhs.date) {
-    case (nil, nil): return false
-    case (nil, _): return true
-    case (_, nil): return false
-    case (let ldate, let rdate): return ldate! < rdate!
+    switch (lhs.closeDate, rhs.closeDate) {
+      case (nil, nil): return false
+      case (nil, _): return true
+      case (_, nil): return false
+      case (let ldate, let rdate): return ldate! < rdate!
     }
   }
 }

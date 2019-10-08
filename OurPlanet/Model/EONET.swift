@@ -42,72 +42,61 @@ class EONET {
     return decoder
   }
 
+  static var ISODateReader: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.locale = Locale(identifier: "en_US_POSIX")
+    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZ"
+    return formatter
+  }()
+  
   static func filteredEvents(events: [EOEvent], forCategory category: EOCategory) -> [EOEvent] {
     return events.filter { event in
-      return event.categories.contains(where: { $0.id == category.id }) && !category.events.contains {
-        $0.id == event.id
-      }
-      }
-      .sorted(by: EOEvent.compareDates)
+      return event.categories.contains(category.id) &&
+             !category.events.contains {
+               $0.id == event.id
+             }
+    }
+    .sorted(by: EOEvent.compareDates)
   }
-  
-  static func request<T: Decodable>(endpoint: String, query: [String: Any] = [:], contentIdentifier: String) -> Observable<T> {
+
+  static func request(endpoint: String, query: [String: Any] = [:])-> Observable<[String: Any]>{
     do {
       guard let url = URL(string: API)?.appendingPathComponent(endpoint),
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
           throw EOError.invalidURL(endpoint)
       }
-
       components.queryItems = try query.compactMap { (key, value) in
         guard let v = value as? CustomStringConvertible else {
           throw EOError.invalidParameter(key, value)
         }
         return URLQueryItem(name: key, value: v.description)
       }
-
       guard let finalURL = components.url else {
         throw EOError.invalidURL(endpoint)
       }
-
       let request = URLRequest(url: finalURL)
 
       return URLSession.shared.rx.response(request: request)
-        .map { (result: (response: HTTPURLResponse, data: Data)) -> T in
-          let decoder = self.jsonDecoder(contentIdentifier: contentIdentifier)
-          let envelope = try decoder.decode(EOEnvelope<T>.self, from: result.data)
-          return envelope.content
+        .map { _, data -> [String: Any] in
+          guard let jsonObject = try? JSONSerialization.jsonObject(with: data, options: []),
+            let result = jsonObject as? [String: Any] else {
+              throw EOError.invalidJSON(finalURL.absoluteString)
+          }
+          return result
       }
     } catch {
       return Observable.empty()
     }
   }
-  
   static var categories: Observable<[EOCategory]> = {
-    let request: Observable<[EOCategory]> = EONET.request(endpoint: categoriesEndpoint, contentIdentifier: "categories")
-
-    return request
-      .map { categories in categories.sorted { $0.name < $1.name } }
+    return EONET.request(endpoint: categoriesEndpoint)
+      .map { data in
+        let categories = data["categories"] as? [[String: Any]] ?? []
+        return categories
+          .compactMap(EOCategory.init)
+          .sorted { $0.name < $1.name }
+      }
       .catchErrorJustReturn([])
       .share(replay: 1, scope: .forever)
   }()
-  
-  private static func events(forLast days: Int, closed: Bool, endpoint: String) -> Observable<[EOEvent]> {
-    let query: [String: Any] = [
-      "days": days,
-      "status": (closed ? "closed" : "open")
-    ]
-    let request: Observable<[EOEvent]> = EONET.request(endpoint: endpoint, query: query, contentIdentifier: "events")
-    return request.catchErrorJustReturn([])
-  }
-
-  static func events(forLast days: Int = 360, category: EOCategory) -> Observable<[EOEvent]> {
-    let openEvents = events(forLast: days, closed: false, endpoint: category.endpoint)
-    let closedEvents = events(forLast: days, closed: true, endpoint: category.endpoint)
-
-    return Observable.of(openEvents, closedEvents)
-      .merge()
-      .reduce([]) { running, new in
-        running + new
-      }
-  }
 }
